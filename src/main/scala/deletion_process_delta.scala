@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 
-object deletion_process {
+object deletion_process_delta {
 	def main(args : Array[String]) : Unit = {
         var spark = SparkSession.builder().appName("delta").config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension").config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog").enableHiveSupport().getOrCreate()
         val treatment_s3_location = "s3://zz-testing/jcher2/po_base/";
