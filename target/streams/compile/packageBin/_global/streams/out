@@ -1,11 +1,15 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/jcher2/Documents/delete_framework/target/scala-2.11/qaframework_2.11-1.0.11.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/qaframework_2.11-1.0.11.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	convert_to_delta_inline$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/delete_framework/target/scala-2.11/classes/convert_to_delta_inline$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/convert_to_delta_inline$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deletion_process_spark.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/deletion_process_spark.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	deletion_process.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/delete_framework/target/scala-2.11/classes/deletion_process.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/deletion_process.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	deletion_process_spark$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/deletion_process_spark$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	convert_to_delta_inline.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/delete_framework/target/scala-2.11/classes/convert_to_delta_inline.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/convert_to_delta_inline.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	deletion_process$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/delete_framework/target/scala-2.11/classes/deletion_process$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/jcher2/Documents/jerry_git/delete_framework/target/scala-2.11/classes/deletion_process$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

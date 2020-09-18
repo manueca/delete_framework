@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/jcher2/Documents/delete_framework/src/main/scala/deletion_process.scala:30:49: value & is not a member of String[0m
-[0m[[0m[31merror[0m] [0m[0m		val condition = String.format("%s.%s = %s.%s" & "%s.%s = %s", treatment_alias, treatment_field, blacklist_alias, blacklist_field,treatment_alias,partition_col,partition_val)[0m
-[0m[[0m[31merror[0m] [0m[0m		                                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were two deprecation warnings; re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
