@@ -25,7 +25,7 @@ object deletion_process {
 		spark.sql("set spark.databricks.delta.autoCompact.enabled = true")
 		val delta_table_2 = spark.read.format("delta").load(treatment_s3_location)
 		delta_table_2.printSchema()
-
+		delta_table_2.show()
 		val delta_table_1 = DeltaTable.forPath(spark, treatment_s3_location)
 	
 		//spark.sql("ANALYZE TABLE delta_table_1 COMPUTE STATISTICS FOR COLUMNS prodt_cd")
@@ -43,6 +43,12 @@ object deletion_process {
 		val end_time = Calendar.getInstance().getTimeInMillis()
 		val duration = end_time - start_time
 		print(TimeUnit.MILLISECONDS.toSeconds(duration))
+		val start_time_2 = Calendar.getInstance().getTimeInMillis()
+		spark.conf.set("spark.databricks.delta.retentionDurationCheck.enabled", "false")
+		delta_table_1.vacuum(0.0)
+		val end_time_2 = Calendar.getInstance().getTimeInMillis()
+		val duration_2 = end_time_2 - start_time_2
+		print(TimeUnit.MILLISECONDS.toSeconds(duration_2))
 	}
 	
 

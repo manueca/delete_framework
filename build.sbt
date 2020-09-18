@@ -1,4 +1,4 @@
-name := "qaFrameWork"
+name := "dfFrameWork"
 
 version := "1.0.11"
 
