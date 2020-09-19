@@ -15,7 +15,9 @@ object deletion_process {
         var spark = SparkSession.builder().appName("delta").config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension").config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog").enableHiveSupport().getOrCreate()
 		print(args(0));
 		print(args(1));
-		
+		val where_clause=args(2);
+		println("where clause is ${where_clause}")
+			
                 val treatment_s3_location = "s3://zz-testing/jcher2/bm_poc/";
 		val blacklist_s3_location = "s3://zz-testing/jcher2/blacklist_modified/";
 		val treatment_field = "prod_cd";
@@ -34,10 +36,15 @@ object deletion_process {
 		val treatment_partition_col="supergeo_cd";
 
 		val blacklist_partition_col="supergeo_cd";
-
+		var condition = "";
 		//val condition = String.format("%s.%s = %s & %s.%s = %s.%s", treatment_alias,treatment_partition_col,blacklist_alias,blacklist_partition_col,treatment_alias, treatment_field, blacklist_alias, blacklist_field)
 		//val condition = s"${treatment_alias}.${treatment_field} = ${blacklist_alias}.${blacklist_field} AND  ${treatment_alias}.${treatment_partition_col} = ${blacklist_alias}.${blacklist_partition_col}" 
-		val condition = s"${treatment_alias}.${treatment_field} = ${blacklist_alias}.${blacklist_field} AND  ${treatment_alias}.${treatment_partition_col} = 'EU'" 
+		if (where_clause.length()==0){
+		    condition = s"${treatment_alias}.${treatment_field} = ${blacklist_alias}.${blacklist_field} AND  ${treatment_alias}.${treatment_partition_col} = 'EU'"
+		} 
+		else{
+		    condition = s"${treatment_alias}.${treatment_field} = ${blacklist_alias}.${blacklist_field} AND  ${treatment_alias}.${treatment_partition_col} = 'EU' AND ${where_clause}"
+		}
 		print (condition)
 		delta_table_1.alias(treatment_alias).merge(blacklist_table_df.alias(blacklist_alias), condition).whenMatched().delete().execute()
 		val end_time = Calendar.getInstance().getTimeInMillis()

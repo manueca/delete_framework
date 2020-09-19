@@ -1,2 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere were two deprecation warnings; re-run with -deprecation for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/jcher2/Documents/jerry_git/delete_framework/src/main/scala/deletion_process.scala:31:72: value repartitionByRange is not a member of io.delta.tables.DeltaTable[0m
+[0m[[0m[31merror[0m] [0m[0m		val delta_table_1 = DeltaTable.forPath(spark, treatment_s3_location).repartitionByRange(1000, "prod_cd")[0m
+[0m[[0m[31merror[0m] [0m[0m		                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
